@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;python&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,10 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
               <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,27 +219,50 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#datascience-to-pandas-reference" class="toc-h1 toc-link" data-title="datascience-to-pandas-reference">Datascience to Pandas Reference</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#reading-in-data" class="toc-h1 toc-link" data-title="reading-in-data">Reading in Data</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#create-a-table-dataframe-from-a-csv-file" class="toc-h2 toc-link" data-title="create-a-table-dataframe-from-a-csv-file">Create a table/dataframe from a csv file</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#create-a-table-df-by-column-using-nested-lists" class="toc-h2 toc-link" data-title="create-a-table-df-by-column-using-nested-lists">Create a table/df by column using nested lists</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#create-a-table-df-using-a-dictionary" class="toc-h2 toc-link" data-title="create-a-table-df-using-a-dictionary">Create a table/df using a dictionary</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-table-df-by-row" class="toc-h2 toc-link" data-title="create-a-table-df-by-row">Create a table/df by row</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-table-df-by-initializing-headers-first-then-adding-columns" class="toc-h2 toc-link" data-title="create-a-table-df-by-initializing-headers-first-then-adding-columns">Create a table/df by initializing headers first, then adding columns</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-table-dataframe-by-initializing-the-headers-first-then-add-the-rows" class="toc-h2 toc-link" data-title="create-a-table-dataframe-by-initializing-the-headers-first-then-add-the-rows">Create a table/dataframe by initializing the headers first, then add the rows</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-table-df-by-initializing-an-empty-object-then-add-the-headers-and-columns-simultaneously" class="toc-h2 toc-link" data-title="create-a-table-df-by-initializing-an-empty-object-then-add-the-headers-and-columns-simultaneously">Create a table/df by initializing an empty object, then add the headers and columns simultaneously</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#kittens" class="toc-h1 toc-link" data-title="kittens">Kittens</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="get-all-kittens">Get All Kittens</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="get-a-specific-kitten">Get a Specific Kitten</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="delete-a-specific-kitten">Delete a Specific Kitten</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -253,20 +273,57 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+        <h1 id='datascience-to-pandas-reference'>Datascience to Pandas Reference</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Import modules and initialize variables to run the examples on your own computer.</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">datascience</span> <span class="kn">import</span> <span class="n">Table</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<span class="c"># SETTING UP VARIABLES</span>
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"SepalLength"</span><span class="p">,</span> <span class="s">"SepalWidth"</span><span class="p">,</span> <span class="s">"PetalLength"</span><span class="p">,</span> <span class="s">"PetalWidth"</span><span class="p">,</span> <span class="s">"Species"</span><span class="p">]</span>
+<span class="n">dummy_row_values</span> <span class="o">=</span> <span class="p">[</span><span class="s">"col1"</span><span class="p">,</span> <span class="s">"col2"</span><span class="p">,</span> <span class="s">"col3"</span><span class="p">,</span> <span class="s">"col4"</span><span class="p">,</span> <span class="s">"col5"</span><span class="p">]</span>
+<span class="n">dummy_column_values</span> <span class="o">=</span> <span class="p">[</span><span class="s">"row1"</span><span class="p">,</span> <span class="s">"row2"</span><span class="p">,</span> <span class="s">"row3"</span><span class="p">]</span>
+</code></pre>
+<p>Welcome to the Datascience to Pandas Reference! UC Berkeley built it&#39;s own Datascience module to help beginners get their feet wet with data science concepts. This website was made to help transition students towards using Pandas.</p>
+
+<p>In this documentation, I will give examples of code that embodies the Datascience method of doing things versus the Pandas way of doing things.</p>
+
+<p>If you want to follow along with the examples, <a href="https://github.com/Pyrinox/datascience-to-pandas">download/clone the iris dataset</a>, create a <a href="http://datahub.berkeley.edu/hub/login">Jupyter Notebook on DataHub</a> (sign in using your CalID information), and copy paste the example code located in this web page.</p>
+<h1 id='reading-in-data'>Reading in Data</h1><h2 id='create-a-table-dataframe-from-a-csv-file'>Create a table/dataframe from a csv file</h2>
+<blockquote>
+<p>Datascience Method</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="n">iris_table</span> <span class="o">=</span> <span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">path_to_data_file</span><span class="p">)</span>
+</code></pre>
+<blockquote>
+<p>Pandas Method</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="n">iris_dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path_to_data_file</span><span class="p">)</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Datascience Method</th>
+<th>Pandas Method</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Table.read_table(path_to_dataset)</code></td>
+<td><code>pd.read_csv(path_to_dataset)</code></td>
+</tr>
+</tbody></table>
+
+<p>Args:</p>
+
+<ul>
+<li><code>path_to_dataset</code>: the directory path for the relevant dataset relative to current file.</li>
+</ul>
+<h2 id='create-a-table-df-by-column-using-nested-lists'>Create a table/df by column using nested lists</h2><h2 id='create-a-table-df-using-a-dictionary'>Create a table/df using a dictionary</h2><h2 id='create-a-table-df-by-row'>Create a table/df by row</h2><h2 id='create-a-table-df-by-initializing-headers-first-then-adding-columns'>Create a table/df by initializing headers first, then adding columns</h2><h2 id='create-a-table-dataframe-by-initializing-the-headers-first-then-add-the-rows'>Create a table/dataframe by initializing the headers first, then add the rows</h2><h2 id='create-a-table-df-by-initializing-an-empty-object-then-add-the-headers-and-columns-simultaneously'>Create a table/df by initializing an empty object, then add the headers and columns simultaneously</h2>
+<blockquote>
+<p>The Datascience Method</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
 
 <span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
 </code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
@@ -433,7 +490,9 @@ Remember — a happy kitten is an authenticated kitten!
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
 
 <p>The Kittn API uses the following error codes:</p>
 
@@ -445,7 +504,7 @@ Remember — a happy kitten is an authenticated kitten!
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request sucks.</td>
+<td>Bad Request -- Your request is invalid.</td>
 </tr>
 <tr>
 <td>401</td>
@@ -492,10 +551,7 @@ Remember — a happy kitten is an authenticated kitten!
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
                 <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
